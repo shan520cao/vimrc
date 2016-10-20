@@ -56,7 +56,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+"autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 let mapleader = ","
 
@@ -93,6 +93,12 @@ nnoremap <leader>wl <C-W>l
 nnoremap <leader>wh <C-W>h
 nnoremap <leader>wk <C-W>k
 nnoremap <leader>wj <C-W>j
+nnoremap <leader>wc <C-W>c
+nnoremap <leader>wf <C-W>|
+nnoremap <leader>ws :sp<CR>
+nnoremap <leader>wv :vsp<CR>
+nnoremap <leader>wo :only<CR>
+nnoremap <leader>wq :qall<CR>
 nnoremap <leader>m %
 
 " YouCompleteMe settings
