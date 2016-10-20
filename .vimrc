@@ -99,3 +99,6 @@ nnoremap <leader>m %
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_confirm_extra_conf=0
+
+" YCM-Generator settings
+nnoremap <leader>ygc :YcmGenerateConfig<CR>
