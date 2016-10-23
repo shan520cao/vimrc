@@ -18,7 +18,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
+Plugin 'scrooloose/nerdtree'
+Plugin 'minibufexpl.vim'
+Plugin 'majutsushi/tagbar'
 
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 
@@ -94,7 +100,7 @@ nnoremap <leader>wh <C-W>h
 nnoremap <leader>wk <C-W>k
 nnoremap <leader>wj <C-W>j
 nnoremap <leader>wc <C-W>c
-nnoremap <leader>wf <C-W>|
+nnoremap <leader>wf <C-W>_
 nnoremap <leader>ws :sp<CR>
 nnoremap <leader>wv :vsp<CR>
 nnoremap <leader>wo :only<CR>
@@ -105,6 +111,31 @@ nnoremap <leader>m %
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_confirm_extra_conf=0
+let g:ycm_filetype_blacklist = {
+	\ 'tagbar' : 1,
+	\ 'nerdtree' : 1,
+\}
 
 " YCM-Generator settings
-nnoremap <leader>ygc :YcmGenerateConfig<CR>
+nnoremap <leader>yg :YcmGenerateConfig<CR>
+
+"nerdtree settings
+nnoremap <leader>f :NERDTreeToggle<CR>
+"let NERDTreeWinPos='right'
+
+"minibufexpl settings
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+"tagbar settings
+nnoremap <leader>t :TagbarToggle<CR>
+let g:tagbar_left = 1
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
+
+"ultisnips settings
+let g:UltiSnipsExpandTrigger="<c-x>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
