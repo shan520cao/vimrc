@@ -95,6 +95,8 @@ set scrolloff=5
 set cursorline
 "set cursorcolumn
 
+set backspace=indent,eol,start
+
 nnoremap <leader>wl <C-W>l
 nnoremap <leader>wh <C-W>h
 nnoremap <leader>wk <C-W>k
@@ -109,6 +111,8 @@ nnoremap <leader>m %
 
 " YouCompleteMe settings
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_confirm_extra_conf=0
 let g:ycm_filetype_blacklist = {
@@ -136,6 +140,4 @@ let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
 
 "ultisnips settings
-let g:UltiSnipsExpandTrigger="<c-x>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<tab>"
