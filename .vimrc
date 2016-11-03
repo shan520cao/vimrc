@@ -22,6 +22,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'minibufexpl.vim'
 Plugin 'majutsushi/tagbar'
 
+Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -113,7 +118,11 @@ nnoremap <leader>m %
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
-nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+nnoremap <leader>gi :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR> 
 let g:ycm_confirm_extra_conf=0
 let g:ycm_filetype_blacklist = {
 	\ 'tagbar' : 1,
