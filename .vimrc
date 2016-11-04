@@ -113,6 +113,10 @@ nnoremap <leader>wv :vsp<CR>
 nnoremap <leader>wo :only<CR>
 nnoremap <leader>wq :qall<CR>
 
+nnoremap <leader>ev :vi $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+nnoremap <leader>gr :Ag! '<cword>'<cr>
 " YouCompleteMe settings
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
@@ -151,3 +155,7 @@ let g:tagbar_sort = 0
 
 "ultisnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
+
+"ag silversearcher-ag settings
+let g:ag_working_path_mode="r"
+let g:ag_highlight=1
