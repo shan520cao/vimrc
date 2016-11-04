@@ -112,7 +112,6 @@ nnoremap <leader>ws :sp<CR>
 nnoremap <leader>wv :vsp<CR>
 nnoremap <leader>wo :only<CR>
 nnoremap <leader>wq :qall<CR>
-nnoremap <leader>m %
 
 " YouCompleteMe settings
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
@@ -137,6 +136,8 @@ nnoremap <leader>f :NERDTreeToggle<CR>
 "let NERDTreeWinPos='right'
 
 "minibufexpl settings
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
