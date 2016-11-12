@@ -22,7 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'minibufexpl.vim'
 Plugin 'majutsushi/tagbar'
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
@@ -159,3 +159,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 "ag silversearcher-ag settings
 let g:ag_working_path_mode="r"
 let g:ag_highlight=1
+
+"ctrlp ctrlpvim/ctrlp.vim
+".ctrlpignore 
+let g:ctrlp_by_filename = 1
+let g:ctrlp_regexp = 1
