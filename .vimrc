@@ -27,6 +27,7 @@ Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 
+"Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -164,3 +165,7 @@ let g:ag_highlight=1
 ".ctrlpignore 
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
+
+" solarized
+"set background=dark
+"colorscheme solarized
