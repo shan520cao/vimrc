@@ -117,7 +117,9 @@ nnoremap <leader>wq :qall<CR>
 nnoremap <leader>ev :vi $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-nnoremap <leader>gr :Ag! '<cword>'<cr>
+nnoremap <leader>gr :Ag! -w '<cword>'<cr>
+nnoremap <leader>gf :AgFile! '<cword>'<cr>
+
 " YouCompleteMe settings
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
