@@ -103,16 +103,16 @@ set cursorline
 
 set backspace=indent,eol,start
 
-nnoremap <leader>wl <C-W>l
-nnoremap <leader>wh <C-W>h
-nnoremap <leader>wk <C-W>k
-nnoremap <leader>wj <C-W>j
+nnoremap <leader>l <C-W>l
+nnoremap <leader>h <C-W>h
+nnoremap <leader>k <C-W>k
+nnoremap <leader>j <C-W>j
 nnoremap <leader>wc <C-W>c
 nnoremap <leader>wf <C-W>_
 nnoremap <leader>ws :sp<CR>
 nnoremap <leader>wv :vsp<CR>
 nnoremap <leader>wo :only<CR>
-nnoremap <leader>wq :qall<CR>
+nnoremap <leader>q :qall<CR>
 
 nnoremap <leader>ev :vi $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
