@@ -15,12 +15,13 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'minibufexpl.vim'
 Plugin 'majutsushi/tagbar'
+
+Plugin 'DoxygenToolkit.vim'
+Plugin 'AutoComplPop'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
@@ -120,24 +121,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>gr :Ag! -w '<cword>'<cr>
 nnoremap <leader>gf :AgFile! '<cword>'<cr>
 
-" YouCompleteMe settings
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
-"let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-nnoremap <leader>gi :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR> 
-let g:ycm_confirm_extra_conf=0
-let g:ycm_filetype_blacklist = {
-	\ 'tagbar' : 1,
-	\ 'nerdtree' : 1,
-\}
-
-" YCM-Generator settings
-nnoremap <leader>yg :YcmGenerateConfig<CR>
-
 "nerdtree settings
 nnoremap <leader>f :NERDTreeToggle<CR>
 "let NERDTreeWinPos='right'
@@ -204,3 +187,11 @@ let g:tagbar_type_go = {
 			\ 'ctagsargs' : '-sort -silent'
 			\ }
 
+" DoxygenToolkit.vim
+let g:DoxygenToolkit_briefTag_pre="@Synopsis  "
+let g:DoxygenToolkit_paramTag_pre="@Param  "
+let g:DoxygenToolkit_returnTag="@Returns  "
+let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
+let g:DoxygenToolkit_blockFooter="--------------------------------------------------------------------------"
+let g:DoxygenToolkit_authorName="sam.cao"
+let g:DoxygenToolkit_licenseTag="My own license"   <-- !!! Does not end with "\<enter>"
