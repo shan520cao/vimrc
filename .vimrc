@@ -120,6 +120,10 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>gr :Ag! -w '<cword>'<cr>
 nnoremap <leader>gf :AgFile! '<cword>'<cr>
 
+" simple install youcompleteme method
+" sudo apt-get install vim-addon-manager 
+" sudo apt-get install vim-youcompleteme
+" vim-addons install youcompleteme
 " YouCompleteMe settings
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
