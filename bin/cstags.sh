@@ -1,4 +1,4 @@
 #!/bin/sh
 
 #ctags -R
-ctags -R --c-kinds=+p --fields=+S .
+ctags --exclude=".git" --exclude=".svn" -R --c-kinds=+p --fields=+S .
