@@ -14,9 +14,9 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+
+" pip install jedi 
+Plugin 'davidhalter/jedi-vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'minibufexpl.vim'
@@ -27,7 +27,6 @@ Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 
-"Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -120,28 +119,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>gr :Ag! -w '<cword>'<cr>
 nnoremap <leader>gf :AgFile! '<cword>'<cr>
 
-" simple install youcompleteme method
-" sudo apt-get install vim-addon-manager 
-" sudo apt-get install vim-youcompleteme
-" vim-addons install youcompleteme
-" YouCompleteMe settings
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
-"let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-nnoremap <leader>gi :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR> 
-let g:ycm_confirm_extra_conf=0
-let g:ycm_filetype_blacklist = {
-	\ 'tagbar' : 1,
-	\ 'nerdtree' : 1,
-\}
-
-" YCM-Generator settings
-nnoremap <leader>yg :YcmGenerateConfig<CR>
-
 "nerdtree settings
 nnoremap <leader>f :NERDTreeToggle<CR>
 "let NERDTreeWinPos='right'
@@ -171,40 +148,4 @@ let g:ag_highlight=1
 ".ctrlpignore 
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
-
-" solarized
-"set background=dark
-"colorscheme solarized
-
-"go tags config for tagbar
-"two ways to install gotags
-"1. go get -u github.com/jstemmer/gotags
-"2. brew install gotags
-let g:tagbar_type_go = {
-			\ 'ctagstype' : 'go',
-			\ 'kinds'     : [
-			\ 'p:package',
-			\ 'i:imports:1',
-			\ 'c:constants',
-			\ 'v:variables',
-			\ 't:types',
-			\ 'n:interfaces',
-			\ 'w:fields',
-			\ 'e:embedded',
-			\ 'm:methods',
-			\ 'r:constructor',
-			\ 'f:functions'
-			\ ],
-			\ 'sro' : '.',
-			\ 'kind2scope' : {
-			\ 't' : 'ctype',
-			\ 'n' : 'ntype'
-			\ },
-			\ 'scope2kind' : {
-			\ 'ctype' : 't',
-			\ 'ntype' : 'n'
-			\ },
-			\ 'ctagsbin'  : 'gotags',
-			\ 'ctagsargs' : '-sort -silent'
-			\ }
 
